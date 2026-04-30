@@ -92,11 +92,11 @@ class Overseerr(object):
         # )
         # self._auth = {"Authorization": f"Bearer {token}"}
 
-    def search_movie(self, query):
-        return self._request_connection(f"search?query={query}&page=1&language=en").json()
+    def search_movie(self, query, page):
+        return self._request_connection(f"search?query={query}&page={page}&language=en").json()
 
-    def search_tv(self, query):
-        return self._request_connection(f"search?query={query}&page=1&language=en").json()
+    def search_tv(self, query, page):
+        return self._request_connection(f"search?query={query}&page={page}&language=en").json()
 
     def search_music_album(self, query):
         # return self._request_connection(f"search?query={query}&page=1&language=en").json()
