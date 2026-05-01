@@ -1,5 +1,4 @@
-[![PyPI version](https://badge.fury.io/py/pyoverseerr.svg)](https://badge.fury.io/py/pyoverseerr)
-[![Downloads](https://pepy.tech/badge/pyoverseerr)](https://pepy.tech/project/pyoverseerr)
+[![PyPI version](https://badge.fury.io/py/pyoverseerrcontinued.svg)](https://badge.fury.io/py/pyoverseerrcontinued)
 
 # pyoverseerr
 
