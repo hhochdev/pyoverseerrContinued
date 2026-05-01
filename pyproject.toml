@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "pyoverseerrcontinued"
+version = "0.0.8"
+authors = [
+  { name="Henry Hochleutner", email="henryhochleutner@gmail.com" },
+]
+dependencies = [
+    "logging",
+    "requests"
+]
+description = "A python module to retrieve information from Overseerr. Continued!"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+[tool.setuptools]
+py-modules = ["pyoverseerr"]
+[tool.setuptools.package-dir]
+"" = "src"
+[project.urls]
+Homepage = "https://github.com/hhochdev/pyoverseerrContinued"
+Issues = "https://github.com/hhochdev/pyoverseerrContinued/issues"

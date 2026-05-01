@@ -10,7 +10,7 @@ This is a project for retrieving information from an Overseerr instance using th
 
 Run the following to install:
 ```python
-pip install pyoverseerr
+pip install pyoverseerrcontinued
 ```
 
 
@@ -25,10 +25,7 @@ pip install pyoverseerr
 import pyoverseerr
 
 overseerr = pyoverseerr.Overseerr(
-    ssl=True,
-    host="192.168.1.120",
-    port="5000",
-    urlbase="overseerr/",
+    url="192.168.1.120:5055",
     api_key="pixf64thuh2m7kbwwgkqp52yznbj4oyo"
 )
 ```
@@ -61,8 +58,10 @@ total = overseerr.total_requests
 #### Searching
 
 ```python
-movie_search = overseerr.search_movie("Movie Name")  
-tv_search = overseerr.search_tv("TV show name")
+# Searching for movies with "Movie Name on the first page"
+movie_search = overseerr.search_movie("Movie Name", 1)
+# Searching for movies with "TV show name on the second page"
+tv_search = overseerr.search_tv("TV show name", 2)
 ```
 
 #### Requesting
