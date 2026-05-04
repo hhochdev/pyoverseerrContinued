@@ -1,8 +1,8 @@
 [![PyPI version](https://badge.fury.io/py/pyoverseerrcontinued.svg)](https://badge.fury.io/py/pyoverseerrcontinued)
 
-# pyoverseerr
+# pyoverseerrcontinued
 
-This is a project for retrieving information from an Overseerr instance using their API.
+This is a project for retrieving information from an Overseerr instance using their API, this is the first project I'm taking up from someone else, as the last commit from vaparr was 3 years ago.
 
 
 # Installation
