@@ -16,7 +16,7 @@ def request(f):
 class Overseerr(object):
     """A class for handling connections with an Overseerr instance."""
 
-    def __init__(self, url, api_key=None, language):
+    def __init__(self, url, language, api_key=None):
 
         self._base_url = "{url}/api/v1/".format(url=url)
         self._api_key = api_key
