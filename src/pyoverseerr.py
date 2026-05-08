@@ -98,7 +98,7 @@ class Overseerr(object):
         return
     
     def discover_movie_genre(self, genre_id, page):
-        return self._request_connection(f"discover/movies/genre/{genre_id}?page={page}&language={self.language}"
+        return self._request_connection(f"discover/movies/genre/{genre_id}?page={page}&language={self.language}").json()
 
     def get_poster_url(self, path):
         return ("https://image.tmdb.org/t/p/w600_and_h900_bestv2" + path)
