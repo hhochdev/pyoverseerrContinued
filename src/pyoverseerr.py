@@ -16,10 +16,11 @@ def request(f):
 class Overseerr(object):
     """A class for handling connections with an Overseerr instance."""
 
-    def __init__(self, url, api_key=None):
+    def __init__(self, url, api_key=None, language):
 
         self._base_url = "{url}/api/v1/".format(url=url)
         self._api_key = api_key
+        self.language = language
         self._auth = None
         self._applicationUrl = None
 
@@ -87,14 +88,17 @@ class Overseerr(object):
         # self._auth = {"Authorization": f"Bearer {token}"}
 
     def search_movie(self, query, page):
-        return self._request_connection(f"search?query={query}&page={page}&language=en").json()
+        return self._request_connection(f"search?query={query}&page={page}&language={self.language}").json()
 
     def search_tv(self, query, page):
-        return self._request_connection(f"search?query={query}&page={page}&language=en").json()
+        return self._request_connection(f"search?query={query}&page={page}&language={self.language}").json()
 
     def search_music_album(self, query):
-        # return self._request_connection(f"search?query={query}&page=1&language=en").json()
+        # return self._request_connection(f"search?query={query}&page={page}&language={self.language}").json()
         return
+    
+    def discover_movie_genre(self, genre_id, page):
+        return self._request_connection(f"discover/movies/genre/{genre_id}?page={page}&language={self.language}"
 
     def get_poster_url(self, path):
         return ("https://image.tmdb.org/t/p/w600_and_h900_bestv2" + path)
@@ -152,7 +156,7 @@ class Overseerr(object):
         }
         print(data)
         request(lambda: self._request_connection(path="request", post_data=data))
-
+        
     def update_request(self, request_id, status):
         """Status = pending/approve/decline/available"""
         request(lambda: self._request_connection(path=f"request/{request_id}/{status}", post_data={}))
