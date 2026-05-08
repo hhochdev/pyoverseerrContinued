@@ -25,7 +25,8 @@ import pyoverseerr
 
 overseerr = pyoverseerr.Overseerr(
     url="192.168.1.120:5055",
-    api_key="pixf64thuh2m7kbwwgkqp52yznbj4oyo"
+    api_key="pixf64thuh2m7kbwwgkqp52yznbj4oyo",
+    language="en"
 )
 ```
 
