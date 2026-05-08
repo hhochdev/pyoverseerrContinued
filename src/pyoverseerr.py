@@ -12,7 +12,8 @@ def request(f):
     print("return:", r)
     return r
 
-
+def dummyTest():
+    return 0
 class Overseerr(object):
     """A class for handling connections with an Overseerr instance."""
 
