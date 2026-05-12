@@ -18,7 +18,7 @@ pip install pyoverseerrcontinued
 
 #### Creating an object of your Overseerr instance
 
-**Note:** You have to supply an `api_key` to successfully authenticate.
+**Note:** You have to supply an `api_key` to successfully authenticate. Language parameter is optional, default is "en"
 
 ```python
 import pyoverseerr

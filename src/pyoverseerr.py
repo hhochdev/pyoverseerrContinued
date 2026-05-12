@@ -17,7 +17,7 @@ def dummyTest():
 class Overseerr(object):
     """A class for handling connections with an Overseerr instance."""
 
-    def __init__(self, url, language, api_key=None):
+    def __init__(self, url, language="en", api_key=None):
 
         self._base_url = "{url}/api/v1/".format(url=url)
         self._api_key = api_key
